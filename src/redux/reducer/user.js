@@ -13,11 +13,13 @@ const userReducer = (state = initialState, action) => {
       return {
         ...state,
         usernameLogin: payload.usernameLogin,
-        token: payload.token
+        token: payload.token,
       };
 
     case USER_LOG_OUT:
-      return initialState;
+      return {
+        ...initialState,
+      };
 
     default:
       return state;
